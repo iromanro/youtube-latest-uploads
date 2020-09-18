@@ -1,5 +1,7 @@
 <app-hero></app-hero>
 <app-rain></app-rain>
+
+<app-loader></app-loader>
 <ng-container *ngIf="!isLoading; else loader">
   <app-featured-video [featuredVideo]="featuredVideo" [isLoading]="isLoading"></app-featured-video>
 </ng-container>

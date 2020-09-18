@@ -10,7 +10,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 export class AppComponent {
   title: string = 'rainych';
-  apiEndpoint: string = "https://content.googleapis.com/youtube/v3/playlistItems?maxResults=11&part=contentDetails%2Cid%2Csnippet&playlistId=UUrrfJ_8kX6YyXE7F3pDJzEw&key=AIzaSyD9T6NxVxXTz95l7lywnTkE720qcLXUmiM"
+  apiEndpoint: string = `https://content.googleapis.com/youtube/v3/playlistItems?maxResults=11&part=contentDetails%2Cid%2Csnippet&playlistId=UUrrfJ_8kX6YyXE7F3pDJzEw&key=${process.env.VUE_APP_KEYs}`;
   videos: any = [];
   featuredVideo: any = {};
   safeSrc: SafeResourceUrl;
@@ -29,14 +29,6 @@ export class AppComponent {
     promise.then((data)=>{
       this.isLoading = false;
       data['items'].forEach((video, index) => {
-        // this.safeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${video.contentDetails.videoId}`)
-
-        // var spotifyRegex = /(Spotify : )(.*?)(?=\\n)/g;
-        // var testUrl = video.snippet.description.toString().match(/(YouTube Music : )(.*)/g);
-        //console.log(video.snippet.description)
-        // if (testUrl) {
-        //   console.log(testUrl[0].replace("YouTube Music : ", ''));
-        // }
         var videoInfo = {
           date: video.contentDetails.videoPublishedAt,
           thumbnail: video.snippet.thumbnails.maxres,
