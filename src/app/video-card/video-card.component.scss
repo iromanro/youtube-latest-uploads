@@ -1,0 +1,73 @@
+@media screen and (min-width: 0px) {
+  .video-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: auto;
+    min-height: 350px;
+
+    .mat-card-header {
+      width: auto;
+      min-height: 80px;
+    }
+    
+    .mat-card-content a {
+      position: relative;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .play {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      width: 10% !important;
+      z-index: 2;
+    }
+
+    .mat-card-content a:hover .play {
+      filter: contrast(120%);
+    }
+
+    .mat-card-actions {
+      padding: 0 10px;
+      margin-bottom: 10px;
+
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      #stream-links {
+        a {
+          font-size: 18px;
+          padding-right: 10px;
+          color: #55a481;
+        }
+
+        a:hover {
+          color: #facfca;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .video-card {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .video-card {
+    width: 600px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+}

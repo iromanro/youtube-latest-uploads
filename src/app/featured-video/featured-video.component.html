@@ -1,0 +1,38 @@
+<div id="featured" fxLayout="column" fxLayoutAlign="center center">
+  <ng-container *ngIf="!isLoading">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{featuredVideo.title}}</mat-card-title>
+        <mat-card-subtitle>Premiered {{featuredVideo.date | date: 'mediumDate'}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <a href="{{featuredVideo.video}}" target="_blank">
+          <img class="thumbnail" [src]="featuredVideo.thumbnail.url"/>
+          <img class="play" src="../../assets/play.png"/>
+        </a>
+      </mat-card-content>
+      <mat-card-actions>
+        <ng-container *ngIf="featuredVideo.spotify || featuredVideo.itunes || featuredVideo.youtube || featuredVideo.deezer || featuredVideo.amazon">
+          Also available on:
+        </ng-container>
+        <div class="stream-links">
+          <ng-container *ngIf="featuredVideo.spotify">
+            <a mat-button href="{{featuredVideo.spotify}}" target="_blank">Spotify</a>
+          </ng-container>
+          <ng-container *ngIf="featuredVideo.itunes">
+            <a mat-button href="{{featuredVideo.itunes}}" target="_blank">iTunes</a>
+          </ng-container>
+          <ng-container *ngIf="featuredVideo.youtube">
+            <a mat-button href="{{featuredVideo.youtube}}" target="_blank">YouTube Music</a>
+          </ng-container>
+          <ng-container *ngIf="featuredVideo.deezer">
+            <a mat-button href="{{featuredVideo.deezer}}" target="_blank">Deezer</a>
+          </ng-container>
+          <ng-container *ngIf="featuredVideo.amazon">
+            <a mat-button href="{{featuredVideo.amazon}}" target="_blank">Amazon</a>
+          </ng-container>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>  
