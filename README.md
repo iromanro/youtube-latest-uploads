@@ -16,11 +16,11 @@ Youtube Channel: [Rainych](https://www.youtube.com/channel/UCrrfJ_8kX6YyXE7F3pDJ
 
 ## Rain Effect
 Rain effect was ported over using [Aaron Rickle's Code Pen](https://codepen.io/arickle) as a base.
-![](https://imgur.com/hGy6y24)
+![](https://i.imgur.com/hGy6y24.gif)
 
 ## Moon Loader
 Content loader was made in the shape of the moon with fading stars surrounding it
-![](https://imgur.com/Gzep18q)
+![](https://i.imgur.com/Gzep18q.gif)
 
 ## Build
 
