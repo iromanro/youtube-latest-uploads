@@ -4,7 +4,7 @@ View Live: https://rainych-homepage.firebaseapp.com/
 
 ## Technologies Used
 Client:
-Vue.js | Material UI | TypeScript | Javascript | HTML | SASS | YouTube Data API
+Vue.js | Material UI | TypeScript | Javascript | HTML | CSS | YouTube Data API
 
 ## Introduction
 
